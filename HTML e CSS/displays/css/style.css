@@ -1,0 +1,41 @@
+body {
+  font-family: Arial;
+  margin: 50px;
+}
+
+header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+article {
+  border-radius: 4px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  margin: 25px;
+}
+
+article h2 {
+  margin: 0;
+}
+
+button {
+  background-color: #febe01;
+  color: #332200;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+button a {
+  text-decoration: none;
+  color: #332200;
+}
+
+article p {
+  color: #b2b2b2;
+}
+
+article .highlight {
+  color: #febe01;
+}
