@@ -12,6 +12,7 @@ header {
   display: grid;
   justify-items: center;
   gap: 4rem;
+  margin: 0px;
 }
 
 img {
@@ -19,23 +20,17 @@ img {
   display: block;
 }
 
-.navegador {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
-  justify-content: center;
-}
-
 a {
   text-decoration: none;
 }
-
 .navegador ul {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   gap: 1.3rem;
   margin: 0;
+  padding: 0;
 }
 
 .navegador ul li {
@@ -56,7 +51,7 @@ a {
 
 article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   max-width: 1000px;
 }
 
@@ -126,13 +121,14 @@ article h2 {
   grid-template-columns: auto 1fr;
   gap: 0.6rem 1.3rem;
   padding: 1.3rem;
+  border-left: 0.25rem solid transparent;
 }
 
 .infos:hover {
-  border-left: 0.25rem solid #e21;
+  border-color: #e21;
 }
 
-.infos:nth-child(even) {
+.infos:nth-child(odd) {
   background-color: #f7f7f7;
 }
 
@@ -158,4 +154,49 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+@media (max-width: 555px) {
+  body,
+  html,
+  header {
+    max-width: 100%;
+    margin: 0 0;
+  }
+  body {
+    margin-top: 4rem;
+  }
+
+  article {
+    max-width: 80%;
+  }
+
+  .detalhes {
+    align-items: center;
+    text-align: center;
+  }
+
+  .detalhes a {
+    justify-self: center;
+  }
+
+  .detalhes::after {
+    content: "";
+    display: inline-block;
+    background-color: #e21;
+    width: 0.25rem;
+    height: 2rem;
+    background: #e21;
+    position: absolute;
+    top: 22.5rem;
+    right: 14rem;
+  }
+
+  p,
+  h1,
+  h2,
+  h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
 }
